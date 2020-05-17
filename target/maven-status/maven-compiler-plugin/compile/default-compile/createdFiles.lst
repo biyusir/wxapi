@@ -1,0 +1,6 @@
+com/github/wx/result/Code2SessionResponse.class
+com/github/wx/result/Code2SessionRequest$Code2SessionRequestBuilder.class
+com/github/wx/api/WxRest.class
+com/github/wx/result/Code2SessionResponse$Code2SessionResponseBuilder.class
+com/github/wx/api/WxRestImpl.class
+com/github/wx/result/Code2SessionRequest.class
