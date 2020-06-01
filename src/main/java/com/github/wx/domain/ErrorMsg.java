@@ -1,14 +1,13 @@
-package com.github.wx.result;
+package com.github.wx.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Code2SessionRequest {
-    private String jsCode;
+@Data
+public class ErrorMsg {
+    private String errcode;
+    private String errmsg;
 }

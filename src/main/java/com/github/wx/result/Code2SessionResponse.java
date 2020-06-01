@@ -1,18 +1,18 @@
 package com.github.wx.result;
 
+import com.github.wx.domain.ErrorMsg;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
-@Builder
 @NoArgsConstructor
+@ToString(callSuper = true)
 @AllArgsConstructor
-public class Code2SessionResponse {
+public class Code2SessionResponse extends ErrorMsg {
     private String openId;
     private String sessionKey;
     private String unionId;
-    private String errcode;
     private String grantType;
 }
