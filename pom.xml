@@ -6,7 +6,7 @@
 
     <groupId>com.github.biyusir</groupId>
     <artifactId>wxapi</artifactId>
-    <version>1.1</version>
+    <version>2.0</version>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
@@ -28,27 +28,20 @@
                 </executions>
             </plugin>
             <plugin>
-                <inherited>true</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>2.10.3</version>
                 <executions>
                     <execution>
-                        <id>bundle-sources</id>
-                        <phase>package</phase>
+                        <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                        <configuration>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <maxmemory>1024</maxmemory>
-                    <encoding>UTF-8</encoding>
-                    <show>protected</show>
-                    <notree>true</notree>
-
-                    <!-- Avoid running into Java 8's very restrictive doclint issues -->
-                </configuration>
             </plugin>
 
             <plugin>
